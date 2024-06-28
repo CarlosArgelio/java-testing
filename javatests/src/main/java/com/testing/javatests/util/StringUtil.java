@@ -2,7 +2,7 @@ package com.testing.javatests.util;
 
 public class StringUtil {
 
-    public static  String repeat(String s, int times) {
+    public static String repeat(String s, int times) {
 
         if (times < 0) {
             throw new IllegalArgumentException("negative times not allowed");
@@ -16,4 +16,8 @@ public class StringUtil {
         return result;
     }
 
+    public static boolean isEmpty(String s) {
+        if (s == null) return true;
+        return !s.matches("[^ ]+");
+    }
 }
